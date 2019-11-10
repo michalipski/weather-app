@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Current weather for city</title>
+</head>
+<body>
+    <p th:text="'Current weather for '+ ${currentWeather.city} + ' on ' + ${#dates.format(#dates.createNow(),'YYYY-MM-dd hh:mm a')}"></p>
+    <p th:text="'Temperature: '+ ${currentWeather.tempInCelsius} + '&#8451; / ' + ${currentWeather.tempInFahrenheit} + '&#8457;'"></p>
+    <p th:text="'Weather conditions: '+ ${currentWeather.description}"></p>
+    <p th:text="'Sunrise: '+ ${currentWeather.sunrise}"></p>
+    <p th:text="'Sunset: '+ ${currentWeather.sunset}"></p>
+</body>
+</html>
